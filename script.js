@@ -4,7 +4,7 @@ const seconds = document.querySelector(".seconds .number"),
   days = document.querySelector(".days .number");
 
 // Set the target date and time
-const targetDate = new Date("2024-3-13T00:00:00+12:00");
+const targetDate = new Date("2024-3-13T12:00:00+02:00");
 
 const timeFunction = setInterval(updateCountdown, 1000);
 
