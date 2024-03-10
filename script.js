@@ -4,7 +4,7 @@ const seconds = document.querySelector(".seconds .number"),
   days = document.querySelector(".days .number");
 
 // Set the target date and time
-const targetDate = new Date("2023-10-27T23:59:00+02:00"); // SAST is UTC+2
+const targetDate = new Date("2024-3-13T23:59:59+12:00"); // SAST is UTC+2
 
 const timeFunction = setInterval(updateCountdown, 1000);
 
