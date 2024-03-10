@@ -11,9 +11,11 @@
 <section class="container">
   <img src="game.jpg" alt="" class="image" />
   <header>MultiVersus Announcement Countdown</header>
-  <p>
-    Countdown timer is based on your current timezone
-  </p>
+  <p id="test"></p>
+  <script>
+      document.getElementById("test").innerHTML =
+      Intl.DateTimeFormat().resolvedOptions().timeZone;
+   </script>
   <div class="time-content">
     <div class="time days">
       <span class="number"></span>
