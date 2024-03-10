@@ -8,6 +8,12 @@ const targetDate = new Date("2024-3-13T12:00:00+02:00");
 
 const timeFunction = setInterval(updateCountdown, 1000);
 
+  if (distance < 1000) {
+    clearInterval(x);
+    document.getElementById("the-timer").innerHTML = "0";
+  }else{
+document.getElementById("the-timer").innerHTML = minutes + "m " + seconds + "s ";
+
 function updateCountdown() {
   const now = new Date();
   const timeRemaining = targetDate - now;
