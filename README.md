@@ -1,4 +1,4 @@
-## MVS Countdown for Announcement 
+## MVS Countdown for Release Date
  Website link: https://fda2021.github.io/mvs-countdown.github.io/
 
  
