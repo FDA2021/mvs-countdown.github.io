@@ -11,11 +11,29 @@
 <section class="container">
   <img src="game.jpg" alt="" class="image" />
   <header>MultiVersus Announcement Countdown</header>
-  <p id="test"></p>
+  <p id="time-zone"></p>
   <script>
-      document.getElementById("test").innerHTML =
+      document.getElementById("time-zone").innerHTML =
       Intl.DateTimeFormat().resolvedOptions().timeZone;
-   </script>
+  </script>
+
+  <p id="localTime"></p>
+  <script>
+    const utcDateString = "2024-03-12T02:00:00.387Z"; // UTC date string (example)
+    const utcDateWithoutMillis = utcDateString.slice(0, -5) + "Z";
+    const utcDate = new Date(utcDateWithoutMillis);
+    console.log("UTC Date:", utcDate.toISOString());
+
+    const offsetMinutes = utcDate.getTimezoneOffset();
+    console.log("Time Zone Offset (minutes):", offsetMinutes);
+
+    const localTime = new Date(utcDate.getTime() - offsetMinutes * 60 * 1000);
+    console.log("Local Time:", localTime.toISOString());
+
+    const localTimeString = localTime.toLocaleString();
+    document.getElementById('localTime').textContent = `Local Time: ${localTimeString}`;
+  </script>
+
   <div class="time-content">
     <div class="time days">
       <span class="number"></span>
